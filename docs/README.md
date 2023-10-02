@@ -1,78 +1,94 @@
 # Geometric Lib
 
-- ## **Circle**
+## **Circle**
 
 ### *Main functions*
 
-> `def area` Takes the variable *r* and returns the area of the circle
+* `def area` Takes the variable *r* and returns the area of the circle
 
-> `def perimeter` Takes the variable *r* and returns the perimeter of the circle
+* `def perimeter` Takes the variable *r* and returns the perimeter of the circle
 
 ### *Examples*
 
-> def area(3) >>>> 9π
+```python
+import circle
 
+print(circle.area(3))  # Print 28.274333882308138
+print(circle.perimeter(3))  # Print 18.84955592153876
 
-> def perimetr(9) >>>> 18π
+```
 
 ##
 
-- ## **Square**
+## **Square**
 
 ### *Main functions*
 
-> `def area` Takes the variable *a* and returns the square area
+* `def area` Takes the variable *a* and returns the square area
 
-> `def perimeter` Takes the variable *a* and returns the perimeter of the square
+* `def perimeter` Takes the variable *a* and returns the perimeter of the square
 
 ### *Examples*
 
-> def area(7) >>>> 49
+```python
+import square
 
+print(square.area(9))  # Print 81
+print(square.perimeter(9))  # Print 36
 
-> def perimetr(9) >>>> 36
+```
 
-#
+##
 
-- ## **Rectangle**
+## **Rectangle**
 
 ### *Main functions*
 
-> `def area` Takes the variables *a* and *b* and returns the area of the rectangle
+* `def area` Takes the variables *a* and *b* and returns the area of the rectangle
 
-> `def perimeter` Takes the variables *a* and *b* and returns the perimeter of the rectangle
+* `def perimeter` Takes the variables *a* and *b* and returns the perimeter of the rectangle
 
 ### *Examples*
 
-> def area(3, 4) >>>> 12
+```python
+import rectangle
 
+print(rectangle.area(3, 4))  # Print 12
+print(rectangle.perimeter(3, 4))  # Print 14
 
-> def perimetr(3, 4) >>>> 14
+```
 
-#
+##
 
-- ## **Triangle**
+## **Triangle**
 
 ### *Main functions*
 
-> `def area` Takes the variables *a* and *h* and returns the area of the triangle
+* `def area` Takes the variables *a* and *h* and returns the area of the triangle
 
-> `def perimeter`Takes three sides of a triangle *a*, *b*, *c* and returns its perimeter
+* `def perimeter`Takes three sides of a triangle *a*, *b*, *c* and returns its perimeter
 
 ### *Examples*
 
-> def area(4, 5) >>>> 10
+```python
+import triangle
 
+print(triangle.area(4, 5))  # Print 10
+print(triangle.perimeter(3, 4, 6))  # Print 13
 
-> def perimetr(3, 4, 6) >>>> 13
+```
 
 ## *Last commits*
 
-* de72216 (HEAD -> main) Adding documentation and explanations to functions
-* b3ecef7 (origin/main, origin/HEAD) fixed a bug in the file
-* dee7826 add new file
-* d078c8d L-03: Docs added
-* 8ba9aeb L-03: Circle and square added
+| Hash-commit | Commit                                                            |
+|-------------|-------------------------------------------------------------------|
+| *de72216*   | (HEAD -> main) Adding documentation and explanations to functions |
+| *b3ecef7*   | (origin/main, origin/HEAD) fixed a bug in the file                |
+| *dee7826*   | add new file                                                      |
+| *d078c8d*   | L-03: Docs added                                                  |
+| *8ba9aeb*   | L-03: Circle and square added                                     |
+
+
 
 
 
