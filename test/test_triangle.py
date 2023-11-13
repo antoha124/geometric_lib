@@ -18,7 +18,7 @@ class TriangleAreaTestCase(unittest.TestCase):
         self.assertEqual(res, (400 * 240) / 2)
 
     def test_triangle_negative_argument_area(self):
-        self.assertEqual(type(triangle.area(-5, -7)), Exception)
+        self.assertEqual(triangle.area(-5, -7), -1)
 
 
 class TrianglePerimeterTestCase(unittest.TestCase):
@@ -35,4 +35,4 @@ class TrianglePerimeterTestCase(unittest.TestCase):
         self.assertEqual(res, 400 + 240 + 170)
 
     def test_triangle_negative_argument_area(self):
-        self.assertEqual(type(triangle.perimeter(-5, -7, -9)), Exception)
+        self.assertEqual(triangle.perimeter(-5, -7, -9), -1)
