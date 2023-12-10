@@ -1,0 +1,34 @@
+name: Python CI/CD 
+
+on:
+  push:
+    branches: [ "labwork4" ]
+  pull_request:
+    branches: [ "labwork4" ]
+
+permissions:
+  contents: read
+
+jobs:
+  test_on_ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.12"
+          architecture: "x64"
+      - name: run tests
+        run: python -m unittest
+  test_on_windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.12"
+          architecture: "x64"
+      - name: run tests
+        run: python -m unittest
