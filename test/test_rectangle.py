@@ -18,13 +18,12 @@ class RectangleAreaTestCase(unittest.TestCase):
         self.assertEqual(res, 400 * 240)
 
     def test_rectangle_negative_argument_area(self):
-        self.assertEqual(rectangle.area(-5, 240), -1)
+        self.assertRaises(ValueError, rectangle.area, -5, 240)
 
 
 class RectanglePerimeterTestCase(unittest.TestCase):
     def test_rectangle_zero_argument_perimeter(self):
-        res = rectangle.perimeter(5, 0)
-        self.assertEqual(res, 0)
+        self.assertRaises(ValueError, rectangle.perimeter, -5, 0)
 
     def test_rectangle_small_argument_perimeter(self):
         res = rectangle.perimeter(5, 7)
@@ -35,4 +34,4 @@ class RectanglePerimeterTestCase(unittest.TestCase):
         self.assertEqual(res, 2 * 400 + 2 * 240)
 
     def test_rectangle_negative_argument_perimeter(self):
-        self.assertEqual(rectangle.perimeter(-5, -7), -1)
+        self.assertRaises(ValueError, rectangle.perimeter, -5, -7)

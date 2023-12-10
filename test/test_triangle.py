@@ -18,13 +18,12 @@ class TriangleAreaTestCase(unittest.TestCase):
         self.assertEqual(res, (400 * 240) / 2)
 
     def test_triangle_negative_argument_area(self):
-        self.assertEqual(triangle.area(-5, -7), -1)
+        self.assertRaises(ValueError, triangle.area, -5, -7)
 
 
 class TrianglePerimeterTestCase(unittest.TestCase):
     def test_triangle_zero_argument_perimeter(self):
-        res = triangle.perimeter(5, 7, 0)
-        self.assertEqual(res, 0)
+        self.assertRaises(ValueError, triangle.perimeter, -5, -7, 0)
 
     def test_triangle_small_argument_area(self):
         res = triangle.perimeter(5, 7, 9)
@@ -35,4 +34,4 @@ class TrianglePerimeterTestCase(unittest.TestCase):
         self.assertEqual(res, 400 + 240 + 170)
 
     def test_triangle_negative_argument_area(self):
-        self.assertEqual(triangle.perimeter(-5, -7, -9), -1)
+        self.assertRaises(ValueError, triangle.perimeter, -5, -7, -9)

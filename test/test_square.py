@@ -18,7 +18,7 @@ class SquareAreaTestCase(unittest.TestCase):
         self.assertEqual(res, 400 * 400)
 
     def test_square_negative_argument_area(self):
-        self.assertEqual(square.area(-5), -1)
+        self.assertRaises(ValueError, square.area, -5)
 
 
 class SquarePerimeterTestCase(unittest.TestCase):
@@ -35,4 +35,5 @@ class SquarePerimeterTestCase(unittest.TestCase):
         self.assertEqual(res, 4 * 400)
 
     def test_square_negative_argument_perimeter(self):
-        self.assertEqual((square.perimeter(-5)), -1)
+        self.assertRaises(ValueError, square.perimeter, -5)
+
