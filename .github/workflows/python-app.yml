@@ -1,4 +1,4 @@
-name: Python CI/CD 
+name: Python CI/CD
 
 on:
   push:
@@ -10,25 +10,22 @@ permissions:
   contents: read
 
 jobs:
-  test_on_ubuntu:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.12"]
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.12
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
           architecture: "x64"
-      - name: run tests
-        run: python -m unittest
-  test_on_windows:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.12"
-          architecture: "x64"
-      - name: run tests
+
+      - name: Run tests
         run: python -m unittest
